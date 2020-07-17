@@ -1,0 +1,20 @@
+@mixin dekstop{
+    @media only screen  and(max-width:1200px){
+        @content;
+    }
+}
+@mixin laptop{
+    @media only screen  and(max-width:991px){
+        @content;
+    }
+}
+@mixin tab{
+    @media only screen  and(max-width:767px){
+        @content;
+    }
+}
+@mixin phone{
+    @media only screen  and(max-width:576px){
+        @content;
+    }
+}
