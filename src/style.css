@@ -58,12 +58,6 @@ header .middle-header {
   font-family: "Philosopher", sans-serif;
 }
 
-@media only screen and (max-width: 1200px) {
-  header .middle-header .middle_help {
-    display: none;
-  }
-}
-
 header .middle-header .middle_help .middle_icon {
   float: left;
   border-right: 1px solid #ccc;

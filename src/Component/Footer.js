@@ -1,14 +1,16 @@
 import React from 'react';
+import logo from '../logo.png';
 
 
 const Footer = () =>{
+       
         return(
             <footer>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3">
                             <div className="in_foot">
-                                <img src="img/logo.png" className="img-fluid" alt=""/>
+                            <h3>Quick links</h3>
                                 <ul>
                                     <li><a href="#!">Car Insurance</a></li>
                                     <li><a href="#!">home Insurance</a></li>
@@ -19,8 +21,8 @@ const Footer = () =>{
                             </div>
                         </div>
                         <div className="col-md-3">
-                            <div className="in_foot">
-                                <img src="img/logo.png" alt=""/>
+                            <div className="in_foot" style={{marginTop:"40px"}}>
+                                
                                 <ul>
                                     <li><a href="#!">Car Insurance</a></li>
                                     <li><a href="#!">home Insurance</a></li>

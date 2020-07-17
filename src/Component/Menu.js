@@ -26,15 +26,15 @@ const Menu = () => {
             <div className="middle-header">
                 <div className="container">
                     <div className="row h-100">
-                        <div className="col-md-3">
+                        <div className="col-lg-3  d-lg-block d-md-none d-none-sm d-none">
                             <div className="logo">
-                                <img src="logo.png" alt=""/>
+                                <img src="logo.png" className="img-fluid" alt=""/>
                             </div>
                         </div>
 
-                        <div className="col-md-9 my-auto">
+                        <div className="col-md-12 col-lg-9  my-auto">
                             <div className="row h-100">
-                                <div className="col-md-3 hidden-md-down">
+                                <div className="col-md-4 col-lg-3 col-6 d-lg-block ">
                                     <div className="middle_help">
                                         <div className="middle_icon">
                                             <i className="fa fa-phone"></i>
@@ -48,7 +48,7 @@ const Menu = () => {
                                     </div>
                                 </div>
 
-                                <div className="col-md-4">
+                                <div className="col-md-4 col-sm-4 col-lg-3 d-lg-block  d-none-md d-none">
                                     <div className="middle_help">
                                         <div className="middle_icon">
                                             <i className="fa fa-map-marker"></i>
@@ -62,7 +62,7 @@ const Menu = () => {
                                     </div>
                                 </div>
 
-                                <div className="col-md-3">
+                                <div className="col-md-4 col-sm-4 col-lg-3 d-lg-block  d-none-sm d-none">
                                     <div className="middle_help">
                                         <div className="middle_icon">
                                             <i className="fa fa-clock-o"></i>
@@ -76,7 +76,7 @@ const Menu = () => {
                                     </div>
                                 </div>
 
-                                <div className="col-md-2 my-auto">
+                                <div className="col-md-4 col-sm-4 col-6 col-lg-3 offset-md-4 offset-lg-0  my-auto">
                                     <a href="#!" className="text-uppercase middle_btn">Get a quote</a>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@ const Menu = () => {
            {/* navbar header */}
             <Navbar  expand="lg">
                 <div className="container">
-                    <Navbar.Brand className="d-lg-none d-xl-none d-md-block"> <img src="logo.png" alt=""/> </Navbar.Brand>
+                    <Navbar.Brand className="d-lg-none d-xl-none d-md-block"> <img src="logo.png" width="200" class="img-fluid" alt=""/> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="my-nav" />
                     <Navbar.Collapse id="my-nav">
                     <Nav className="mr-auto">
