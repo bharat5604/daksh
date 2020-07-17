@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Philosopher&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 /* mixins start */
 /* mixins end */
 /*body start*/
 body {
-  font-family: "Philosopher", sans-serif;
+  font-family: Open Sans ", sans-serif";
   margin: 0;
   padding: 0;
 }
@@ -23,6 +24,13 @@ header .top-header {
 
 header .top-header .top_left, header .top-header .top_right {
   float: left;
+}
+
+@media only screen and (max-width: 767px) {
+  header .top-header .top_left, header .top-header .top_right {
+    float: inherit !important;
+    text-align: center;
+  }
 }
 
 header .top-header .top_left p, header .top-header .top_right p {
@@ -48,6 +56,12 @@ header .top-header .top_right p a:last-child {
 header .middle-header {
   padding: 25px 0;
   font-family: "Philosopher", sans-serif;
+}
+
+@media only screen and (max-width: 1200px) {
+  header .middle-header .middle_help {
+    display: none;
+  }
 }
 
 header .middle-header .middle_help .middle_icon {
@@ -92,19 +106,32 @@ header .middle-header .middle_btn {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  header .middle-header .middle_btn {
+    float: right;
+  }
+}
+
 header nav {
   background: #0177d7;
 }
 
 header nav .navbar-nav a {
   color: #fff !important;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
   margin: 0 20px;
 }
 
 header nav .navbar-nav a:first-child {
   margin-left: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  header nav .navbar-nav a {
+    margin: 0;
+  }
 }
 
 header nav .navbar-nav .dropdown-menu {
@@ -130,6 +157,28 @@ header nav .navbar-nav .dropdown-menu a:hover {
 /*carousel start*/
 .home-main .carousel {
   height: 67vh;
+}
+
+@media only screen and (max-width: 767px) {
+  .home-main .carousel {
+    height: auto !important;
+  }
+  .home-main .carousel img {
+    height: inherit !important;
+  }
+  .home-main .carousel .caption1, .home-main .carousel .caption2, .home-main .carousel .caption3 {
+    top: 25% !important;
+  }
+  .home-main .carousel .caption1 h3, .home-main .carousel .caption2 h3, .home-main .carousel .caption3 h3 {
+    font-size: 20px !important;
+    display: none;
+  }
+  .home-main .carousel .caption1 p, .home-main .carousel .caption2 p, .home-main .carousel .caption3 p {
+    font-size: 13px;
+  }
+  .home-main .carousel .caption1 button, .home-main .carousel .caption2 button, .home-main .carousel .caption3 button {
+    display: none;
+  }
 }
 
 .home-main .carousel img {
@@ -245,8 +294,23 @@ header nav .navbar-nav .dropdown-menu a:hover {
           box-shadow: 3px 4px 6px #ccc;
 }
 
+@media only screen and (max-width: 767px) {
+  .home-main .contact {
+    background: none;
+    padding: 0;
+    width: 94%;
+  }
+}
+
 .home-main .contact .from_contact {
   text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .home-main .contact .from_contact {
+    background: #0177d7;
+    padding: 15px;
+  }
 }
 
 .home-main .contact .from_contact .heading h3 {
@@ -288,6 +352,12 @@ header nav .navbar-nav .dropdown-menu a:hover {
   border-radius: 8px;
   border-radius: none;
   border: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .home-main .contact .contat_information {
+    padding: 15px;
+  }
 }
 
 .home-main .contact .contat_information .heading {
@@ -352,11 +422,6 @@ footer h3 {
 
 footer p {
   color: #808080;
-}
-
-footer ul {
-  margin: 0;
-  padding: 0;
 }
 
 footer ul li {

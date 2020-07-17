@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import '_responsive';
 
 //Variables
 $fontFamily:'Philosopher', sans-serif;
-$fontFamily2:'Josefin Sans', sans-serif;
+$fontFamily2:Open Sans', sans-serif';
 $green:#0177d7;
 $yellow:rgb(243, 156, 18);
 $white:#fff;
@@ -28,7 +30,7 @@ $paraFontSize:14px;
 
 /*body start*/
 body{
-    font-family: $fontFamily;
+    font-family:$fontFamily2;
     margin: 0;
     padding: 0;
 
@@ -49,6 +51,10 @@ header{
 
         .top_left{
             float: left;
+            @include tab{
+                float: inherit !important;
+                text-align: center;
+            }
             p{
                 color: $txtColor;
                 font-size: $paraFontSize;
@@ -82,6 +88,9 @@ header{
         .middle_help{
             // display: table;
             // width: 100%;
+            @include dekstop{
+                display: none;
+            }
             .middle_icon{
                 float: left;
                 border-right: 1px solid #ccc;
@@ -120,6 +129,9 @@ header{
             font-size: 13px;
             border-radius: 4px;
             text-decoration: none;
+            @include dekstop{
+                float: right;
+            }
         }
     }//middle-header
 
@@ -130,12 +142,15 @@ header{
         .navbar-nav{
             a{
                 color: $white !important;
-                font-size: $subHeadFontSize;
-                // font-weight: bold;
+                font-size: $paraFontSize;
+                font-weight: bold;
                 text-transform: uppercase;
                 margin: 0 20px;
                 &:first-child{
                     margin-left: 0;
+                }
+                @include dekstop{
+                    margin: 0;
                 }
             }
             .dropdown-menu{
@@ -164,6 +179,27 @@ header{
     //carousel
     .carousel{
         height: 67vh;
+        @include tab{
+            height: auto !important;
+            img{
+                height: inherit !important;
+            }
+            .caption1{
+                top:25% !important;
+                
+                h3{
+                    font-size: 20px !important;
+                    display: none;
+                }
+                p{
+                    font-size: 13px;
+                    // display: none;
+                }
+                button{
+                    display: none;
+                }
+            }
+        }
         img{
             height: 67vh;
         }
@@ -260,9 +296,18 @@ header{
         background: linear-gradient(90deg, $green 50%, $white 50%);
         padding: 15px;
         box-shadow: 3px 4px 6px #ccc;
+        @include tab{
+            background:none;
+            padding: 0;
+            width: 94%;
+        }
         
         .from_contact{
             text-align: center;
+            @include tab{
+                background: $green;
+                padding: 15px;
+            }
             .heading{
                 @include heading;
                 i{
@@ -299,6 +344,9 @@ header{
         }
 
         .contat_information{
+            @include tab{
+                padding: 15px;
+            }
             .heading{
                 @include heading;
                 text-align: center;
@@ -354,8 +402,8 @@ footer{
         color: $txtColor;
     }
     ul {
-        margin: 0;
-        padding: 0;
+        // margin: 0;
+        // padding: 0;
         li{
             list-style-type: square;
             color: $txtColor;
